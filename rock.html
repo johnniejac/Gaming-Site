@@ -1,0 +1,152 @@
+<html>
+<head>
+    <title>page title</title>
+    <style>
+    * {
+        font-weight: 900;
+    }
+    </style>
+</head>
+<body style="text-align:center;background-color:#2c3e50; color:#3498db;font-family:cursive;font-size:25px;">
+    <p >Hello, thank you for particpating , below are the rules</p>
+    <p>right next to the picture of rules are the buttons click one</p>
+    <img src="http://upload.wikimedia.org/wikipedia/en/c/cc/Rock_paper_scissors_lizard_spock.png" align="center" style="display:block; margin: 0 auto;"/>
+    <input type="button" onclick="chooseRock()" value="rock" />
+    <input type="button" onclick="choosePaper()" value="paper" />
+    <input type="button" onclick="chooseScissors()" value="scissors" />
+    <input type="button" onclick="chooseSpock()" value="spock"/>
+    <input type="button" onclick="chooseLizard()" value="lizard"/>
+    <script type="text/javascript">
+    function computerChoose() {
+        var randomStuff = Math.random();
+        if (randomStuff <= .20) {
+           computerChoice = "rock";
+       } else if(randomStuff <= .40 ) {
+           computerChoice = "paper";
+       } else if(randomStuff <= .60){
+           computerChoice = "scissors";
+        }else if (randomStuff <= .80){
+            computerChoice= "spock"
+        }else {
+            computerChoice="lizard"
+        }
+       return computerChoice;
+    }; 
+    var computerChoice = computerChoose();
+    function choosePaper(){
+            switch(computerChoose()){
+                case  "scissors":
+                    window.alert("You lose the computer choose scissors ")
+                    feedback();
+                break;
+                case  "paper":
+                    window.alert("It is a tie the computer choose paper")
+                    feedback();
+                break;
+                case  "rock":
+                    window.alert("You win the computer choose rock")
+                    feedback();
+                break;
+                case "spock":
+                    window.alert("You win the computer choose spock")
+                    feedback();
+                break;
+            }
+    };
+    function chooseRock(){
+                switch(computerChoose()){
+                case "scissors":
+                    window.alert("you win the computer choose scissors")
+                    feedback();
+                break;
+                case "paper":
+                    window.alert("You lose the computer choose paper")
+                    feedback();
+                break;
+                case "rock":
+                    window.alert("It is a tie the computer choose rock")
+                    feedback();
+                break;
+                case "spock":
+                    window.alert("You lose the computer choose spock")
+                    feedback();
+                break;
+            }
+        };
+    function chooseScissors(){
+    
+            switch(computerChoose()){
+                case "scissors":
+                    window.alert("It is a tie the computer choose scissors too")
+                    feedback();
+                break;
+                case "paper":
+                    window.alert("You win the computer choose paper")
+                    feedback();
+                break;
+                case "rock":
+                    window.alert("You lose the computer choose rock")
+                    feedback();
+                break;
+                case "lizard":
+                    window.alert("You win the computer choose lizard")
+                    feedback();
+                break;
+            }
+    
+};
+    function chooseSpock(){
+            switch(computerChoose()){
+                case "spock":
+                    window.alert("It is a tie the computer choose spock too")
+                    feedback();
+                break;
+                case "lizard":
+                    window.alert("You lose the computer choose lizard")
+                    feedback();
+                break;
+                case "scissors":
+                    window.alert("You win the computer choose spock")
+                    feedback();
+                break;
+                case "rock":
+                    window.alert("You win the computer choose rock")
+                    feedback();
+                break;
+                case "paper":
+                    window.alert("You lose the computer chose paper")
+                    feedback();
+                break;
+            }
+};
+    function chooseLizard(){
+            switch(computerChoose()){
+                case "lizard":
+                    window.alert("It is a tie the computer choose lizard too")
+                    feedback();
+                break;
+                case "spock":
+                    window.alert("You win the computer choose spock")
+                    feedback();
+                break;
+                case "paper":
+                    window.alert("You win the computer choose spock")
+                    feedback();
+                break;
+                case "scissors":
+                    window.alert("You lose the computer choose scissors")
+                    feedback();
+                break;
+                case "rock":
+                    window.alert("You lose the computer choose scissors")
+                    feedback();
+                break;
+            }
+    };
+    
+
+
+  </script> 
+  
+</body>
+</html>     
